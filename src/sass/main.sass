@@ -1,0 +1,144 @@
+@import 'font-awesome.min.css'
+@import '../fonts/opensans/opensans.css'
+@import 'vars'
+@import 'mixins'
+
+*::-webkit-input-placeholder
+	color: $c1
+	opacity: 1
+
+*:-moz-placeholder
+	color: $c1
+	opacity: 1
+
+*::-moz-placeholder
+	color: $c1
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: $c1
+	opacity: 1
+
+*
+	box-sizing: border-box
+
+body
+	font-family: $t1
+
+.form-wrapper
+	width: 100%
+	height: 100%
+	color: $c1
+
+.form-box
+	position: relative
+	margin: 0 auto
+	max-width: 500px
+	padding: 1px rem(30) rem(30)
+	border-radius: 4px
+	box-shadow: 0 0 5px rgba(#000, .3)
+
+.form-title
+	text-align: center
+	font-size: rem(24)
+	margin: rem(30) 0 rem(20)
+
+
+.form
+	position: relative
+
+	input
+		width: 100%
+		display: block
+		border: none
+		border-bottom: 1px solid #666
+		margin: rem(5) 0
+		font-size: rem(16)
+		font-weight: 
+		height: rem(35)
+		box-shadow: none
+		color: $c1
+
+		&:required:invalid
+			box-shadow: none
+			border-bottom: 1px solid red
+
+	.input-sum
+		width: calc(100% - 60px)
+		margin: 0 0 0 60px
+
+	textarea
+		width: 100%
+		height: rem(28)
+		display: block
+		margin: rem(10) 0 rem(5)
+		font-size: rem(16)
+		color: $c1
+		border: none
+		border-bottom: 1px solid #666
+		font-family: $t1
+		outline: none
+		resize: none
+		overflow: hidden
+
+	select
+		width: 100%
+		height: rem(35)
+		display: block
+		font-size: rem(16)
+		color: $c1
+		border: none
+		border-bottom: 1px solid #666
+		appearance: none
+		text-indent: rem(-1);
+
+	option:checked, option:hover, option:focus
+		background: #eee
+
+	textarea:focus, input:focus, input:required:invalid:focus, select:focus
+		outline: none
+		border-bottom: 1px solid $c3
+
+	.form-button
+		display: block
+		margin: rem(70) auto 0	
+		cursor: pointer
+		border-radius: 4px
+		border: none
+		padding: rem(10) rem(50) rem(10) rem(20)
+		background: $c1
+		color: #fff
+		font-size: inherit
+		transition-duration: .2s
+			
+		&:hover, &:focus
+			background: $c3
+
+		&::before
+			content: ''
+			background-image: url(../img/fly.svg)
+			position: absolute
+			background-repeat: no-repeat
+			background-size: cover
+			width: rem(18)
+			height: rem(18)
+			margin: rem(1) 0 0 rem(50)
+
+.fa
+	position: absolute
+	padding: rem(10) rem(0) rem(2) rem(5)
+	font-size: rem(18)
+	right: 0
+	color: $c1
+	background: #fff
+	z-index: 100
+
+.send-sum
+	position: absolute
+	margin: rem(7) 0 0
+
+label.error
+	color: red
+	position: absolute
+	margin: rem(-32) 0 0 35%
+	pointer-events: none

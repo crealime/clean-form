@@ -1,0 +1,14 @@
+$em: 16
+$rem: 16
+
+$c1: #666
+$c2: #999
+$c3: #00a99d
+
+$t1: 'Open Sans', sans-serif
+
+@function em($px, $base: $em)
+	@return $px / $base + em
+
+@function rem($px)
+	@return $px / $rem + rem
