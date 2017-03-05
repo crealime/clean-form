@@ -1,16 +1,13 @@
-# Clear Form
-
-
-<div align="center">
-	<a href="http://webmaker.work/form/form.png" alt="Clear Form"></a>
-</div>
-
-## Form template with an arbitrary number of fields
-
-
+# Clean Form
+<br>
+<p align="center">
+	<img src="http://webmaker.work/form/form.png" alt="Clear Form">
+</p>
+<br>
+## Form template with captcha and an arbitrary number of fields
+<br>
 There is no need to modify the php file, all the settings are made in the html
-
-
+<br>
 ```html
 <!-- Hidden settings fields-->
 <!-- Admin name -->
@@ -19,23 +16,17 @@ There is no need to modify the php file, all the settings are made in the html
 <input type="hidden" name="admin_email" value="Your E-mail">
 <!-- E-mail Subject -->
 <input type="hidden" name="form_subject" value="New Message">
-<!-- Submission message -->
-<input type="hidden" name="alert_message" value="Your message has been sent!">
-<!-- Captcha Error -->
-<input type="hidden" name="wrong_sum" value="Sum of the numbers entered incorrectly!">
 <!-- End of hidden settings fields -->
 
 <input type="text" name="Name" placeholder="Name" required maxlength="30">
 <input type="email" name="Mail" placeholder="E-mail" maxlength="30">
 <input type="tel" name="Phone" placeholder="Phone" required maxlength="30">
-<select name="Select"><option value="" selected class="first-select">Ñhoice</option>
+<select name="Select"><option value="" selected class="first-select">Ð¡hoice</option>
 	<option value="First">First</option>
 	<option value="Second">Second</option>
 	<option value="Third">Third</option>
 </select>
 <textarea id="message" name="Message" placeholder="Message" maxlength="1000"></textarea>
 ```
-
-
-### Demo:
+#### Demo:
 http://webmaker.work/form

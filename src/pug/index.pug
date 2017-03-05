@@ -7,11 +7,11 @@ html(lang="en")
 		link(rel="stylesheet", href="css/main.css")
 	body
 		.form-wrapper
-			.icon-box
 
 			.form-box
 				h4.form-title Clean Form
-				form.form(id="send-form")
+				.sending.opa Your message has been sent!
+				form.form(id="send-form" method="post")
 					//- Hidden settings fields
 					//- Admin name
 					input.form-name(type="hidden" name="project_name" value="Your Name")
@@ -19,17 +19,13 @@ html(lang="en")
 					input(type="hidden" name="admin_email" value="Your E-mail")
 					//- E-mail Subject
 					input(type="hidden" name="form_subject" value="New Message")
-					//- Submission message
-					input(type="hidden" name="alert_message" value="Your message has been sent!")
-					//- Сaptcha Error 
-					input(type="hidden" name="wrong_sum" value="Sum of the numbers entered incorrectly!")
 					//- End of hidden settings fields
 					i.fa.fa-user(aria-hidden="true")
-					input(type="text" name="Name" placeholder="Name" required maxlength="30")
+					input(type="text" name="Name" placeholder="Name" maxlength="30")
 					i.fa.fa-envelope(aria-hidden="true")
 					input(type="email" name="Mail" placeholder="E-mail" maxlength="30")
 					i.fa.fa-phone(aria-hidden="true")
-					input(type="tel" name="Phone" placeholder="Phone" required maxlength="30")
+					input(type="tel" name="Phone" placeholder="Phone" maxlength="30")
 					i.fa.fa-caret-down(aria-hidden="true")
 					select(name="Select")
 						<option value="" selected class="first-select">Сhoice</option>
@@ -43,6 +39,7 @@ html(lang="en")
 					span.send-sum
 					input.input-sum(type="text" name="sum" placeholder="?" maxlength="2")
 					button.form-button Send
+
 
 		script(src="js/libs.min.js")
 		script(src="js/main.js")

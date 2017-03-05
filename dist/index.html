@@ -8,18 +8,16 @@
 	</head>
 	<body>
 		<div class="form-wrapper">
-			<div class="icon-box"></div>
 			<div class="form-box">
 				<h4 class="form-title">Clean Form</h4>
-				<form class="form" id="send-form">
+				<div class="sending opa">Your message has been sent!</div>
+				<form class="form" id="send-form" method="post">
 					<input class="form-name" type="hidden" name="project_name" value="Your Name">
 					<input type="hidden" name="admin_email" value="Your E-mail">
-					<input type="hidden" name="form_subject" value="New Message">
-					<input type="hidden" name="alert_message" value="Your message has been sent!">
-					<input type="hidden" name="wrong_sum" value="Sum of the numbers entered incorrectly!"><i class="fa fa-user" aria-hidden="true"></i>
-					<input type="text" name="Name" placeholder="Name" required maxlength="30"><i class="fa fa-envelope" aria-hidden="true"></i>
+					<input type="hidden" name="form_subject" value="New Message"><i class="fa fa-user" aria-hidden="true"></i>
+					<input type="text" name="Name" placeholder="Name" maxlength="30"><i class="fa fa-envelope" aria-hidden="true"></i>
 					<input type="email" name="Mail" placeholder="E-mail" maxlength="30"><i class="fa fa-phone" aria-hidden="true"></i>
-					<input type="tel" name="Phone" placeholder="Phone" required maxlength="30"><i class="fa fa-caret-down" aria-hidden="true"></i>
+					<input type="tel" name="Phone" placeholder="Phone" maxlength="30"><i class="fa fa-caret-down" aria-hidden="true"></i>
 					<select name="Select"><option value="" selected class="first-select">Сhoice</option>
 <option value="First">First</option>
 <option value="Second">Second</option>

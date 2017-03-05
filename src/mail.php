@@ -8,7 +8,7 @@ $alert_message = trim($_POST["alert_message"]);
 $wrong_summ = trim($_POST["wrong_sum"]);
 
 foreach ( $_POST as $key => $value ) {
-	if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" && $key != "alert_message" && $key != "wrong_sum" && $key != "sum" ) {
+	if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" && $key != "sum" ) {
 		$message .= "
 		" . ( ($switch = !$switch) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
 		<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>

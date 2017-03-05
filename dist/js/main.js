@@ -11,42 +11,60 @@ $.each($(".form textarea"), function () {
 
 // Send Mail
 
+var myForm = $(".form"),
+		mySum = $('.send-sum'),
+		sendForm = $("#send-form"),
+		sending = $(".sending"),
+		inputSum = $(".input-sum");
+
 function randomNumber () {
 	one = Math.floor(Math.random() * 8.9999) + 1;
 	two = Math.floor(Math.random() * 8.9999) + 1;
-	$('.send-sum').text(one + ' + ' + two + ' = ');
+	mySum.text(one + ' + ' + two + ' = ');
 }
 
 var one = Math.floor(Math.random() * 8.9999) + 1;
 var two = Math.floor(Math.random() * 8.9999) + 1;
-$('.send-sum').text(one + ' + ' + two + ' = ');
+mySum.text(one + ' + ' + two + ' = ');
 
-$(".form").validate();
+myForm.validate({
+	rules: {
+		Name: "required",
+		Mail: {
+			required: true,
+			email: true
+		},
+		Phone: "required"
+	}
+});
 
-$("#send-form").submit(function(e) {
+sendForm.submit(function(e) {
 	e.preventDefault;
 	var that = $(this);
 	var result_sum = $('.input-sum');
 	var end_sum = parseInt(result_sum.val());
-	var msg = $("[name='alert_message']").val();
-	var wrong = $("[name='wrong_sum']").val();
 	if(one + two == end_sum){
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
 			data: that.serialize()
 		}).done(function() {
-			alert(msg);
+			myForm.animate({opacity:0}, 300, function() {
+				sending.animate({opacity:1},300);
+			});
 			setTimeout(function() {
-				that.trigger("reset");
 				$(".form textarea").css('height', '28');
 				randomNumber();
-			}, 1000);
+				that.trigger("reset");
+				inputSum.val('').attr('placeholder', '?');
+				sending.animate({opacity:0}, 300, function() {
+					myForm.animate({opacity:1},300);
+				});
+			}, 2500);
 		});
 	}
 	else {
-		// alert(wrong);
-		$('.input-sum').val('').attr('placeholder', 'Enter the correct answer');
+		inputSum.val('').attr('placeholder', 'Enter the correct answer.');
 		randomNumber();
 	}
 

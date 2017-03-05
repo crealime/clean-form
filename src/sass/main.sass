@@ -32,7 +32,7 @@ body
 
 .form-box
 	position: relative
-	margin: 0 auto
+	margin: calc(50vh - 210px) auto 0
 	max-width: 500px
 	padding: 1px rem(30) rem(30)
 	border-radius: 4px
@@ -46,6 +46,7 @@ body
 
 .form
 	position: relative
+	transition-duration: .5s
 
 	input
 		width: 100%
@@ -58,10 +59,11 @@ body
 		height: rem(35)
 		box-shadow: none
 		color: $c1
+		border-radius: 0
 
 		&:required:invalid
 			box-shadow: none
-			border-bottom: 1px solid red
+			// border-bottom: 1px solid red
 
 	.input-sum
 		width: calc(100% - 60px)
@@ -80,6 +82,7 @@ body
 		outline: none
 		resize: none
 		overflow: hidden
+		border-radius: 0
 
 	select
 		width: 100%
@@ -91,6 +94,7 @@ body
 		border-bottom: 1px solid #666
 		appearance: none
 		text-indent: rem(-1);
+		border-radius: 0
 
 	option:checked, option:hover, option:focus
 		background: #eee
@@ -140,5 +144,14 @@ body
 label.error
 	color: $c1
 	position: absolute
-	margin: rem(-32) 0 0 35%
+	margin: rem(-32) 0 0 calc(50% - 75px)
 	pointer-events: none
+
+.sending
+	position: absolute
+	width: 100%
+	top: 50%
+	left: rem(140)
+
+.opa
+	opacity: 0
