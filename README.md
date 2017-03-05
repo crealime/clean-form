@@ -1,7 +1,7 @@
 # Clean Form
 <br>
 <p align="center">
-	<img src="http://webmaker.work/form/form.png" alt="Clear Form">
+	<img src="http://webmaker.work/form/form2.png" alt="Clear Form">
 </p>
 <br>
 ## Form template with captcha and an arbitrary number of fields
