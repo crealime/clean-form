@@ -1,15 +1,13 @@
-# Clear Form
-
+# Clean Form
+<br>
 <p align="center">
 	<img src="http://webmaker.work/form/form.png" alt="Clear Form">
 </p>
-
+<br>
 ## Form template with an arbitrary number of fields
-
-
+<br>
 There is no need to modify the php file, all the settings are made in the html
-
-
+<br>
 ```html
 <!-- Hidden settings fields-->
 <!-- Admin name -->
@@ -34,7 +32,6 @@ There is no need to modify the php file, all the settings are made in the html
 </select>
 <textarea id="message" name="Message" placeholder="Message" maxlength="1000"></textarea>
 ```
-
-
+<br>
 ### Demo:
 http://webmaker.work/form
