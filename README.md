@@ -1,7 +1,7 @@
 # Clean Form
 <br>
 <p align="center">
-	<img src="http://webmaker.work/form/form2.png" alt="Clear Form">
+	<img src="http://webmaker.work/form/form.png" alt="Clear Form">
 </p>
 <br>
 ## Form template with captcha and an arbitrary number of fields
@@ -20,11 +20,7 @@ There is no need to modify the php file, all the settings are made in the html
 
 <input type="text" name="Name" placeholder="Name" required maxlength="30">
 <input type="email" name="Mail" placeholder="E-mail" maxlength="30">
-<<<<<<< HEAD
-<input type="tel" name="Phone" placeholder="Phone" required maxlength="30"> 
-=======
 <input type="tel" name="Phone" placeholder="Phone" required maxlength="30">
->>>>>>> 1402731472dfd5687e74bebdea1d57d8cbbab7a5
 <select name="Select"><option value="" selected class="first-select">Сhoice</option>
 	<option value="First">First</option>
 	<option value="Second">Second</option>
@@ -33,8 +29,4 @@ There is no need to modify the php file, all the settings are made in the html
 <textarea id="message" name="Message" placeholder="Message" maxlength="1000"></textarea>
 ```
 #### Demo:
-<<<<<<< HEAD
 http://webmaker.work/form
-=======
-http://webmaker.work/form
->>>>>>> 1402731472dfd5687e74bebdea1d57d8cbbab7a5
