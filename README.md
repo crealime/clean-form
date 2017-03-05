@@ -1,14 +1,15 @@
 # Clear Form
 
+
 <div align="center">
-	<a href="http://webmaker.work/form/form.svg" alt="Clear Form"></a>
+	<a href="http://webmaker.work/form/form.png" alt="Clear Form"></a>
 </div>
 
 ## Form template with an arbitrary number of fields
 
-***
+
 There is no need to modify the php file, all the settings are made in the html
-***
+
 
 ```html
 <!-- Hidden settings fields-->
@@ -35,4 +36,6 @@ There is no need to modify the php file, all the settings are made in the html
 <textarea id="message" name="Message" placeholder="Message" maxlength="1000"></textarea>
 ```
 
-### Demo http://webmaker.work/form
+
+### Demo:
+http://webmaker.work/form
