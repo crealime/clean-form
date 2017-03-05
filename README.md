@@ -1,9 +1,8 @@
 # Clear Form
 
-
-<div align="center">
+<p align="center">
 	<a href="http://webmaker.work/form/form.png" alt="Clear Form"></a>
-</div>
+</p>
 
 ## Form template with an arbitrary number of fields
 
@@ -28,7 +27,7 @@ There is no need to modify the php file, all the settings are made in the html
 <input type="text" name="Name" placeholder="Name" required maxlength="30">
 <input type="email" name="Mail" placeholder="E-mail" maxlength="30">
 <input type="tel" name="Phone" placeholder="Phone" required maxlength="30">
-<select name="Select"><option value="" selected class="first-select">Ñhoice</option>
+<select name="Select"><option value="" selected class="first-select">Ã‘hoice</option>
 	<option value="First">First</option>
 	<option value="Second">Second</option>
 	<option value="Third">Third</option>
