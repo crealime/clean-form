@@ -15,7 +15,8 @@ var myForm = $(".form"),
 		mySum = $('.send-sum'),
 		sendForm = $("#send-form"),
 		sending = $(".sending"),
-		inputSum = $(".input-sum");
+		inputSum = $(".input-sum"),
+		myValidator = false;
 
 function randomNumber () {
 	one = Math.floor(Math.random() * 8.9999) + 1;
@@ -28,6 +29,7 @@ var two = Math.floor(Math.random() * 8.9999) + 1;
 mySum.text(one + ' + ' + two + ' = ');
 
 myForm.validate({
+	
 	rules: {
 		Name: "required",
 		Mail: {
@@ -35,7 +37,10 @@ myForm.validate({
 			email: true
 		},
 		Phone: "required"
-	}
+	},
+  submitHandler: function() {
+    myValidator = true;
+  }
 });
 
 sendForm.submit(function(e) {
@@ -43,12 +48,13 @@ sendForm.submit(function(e) {
 	var that = $(this);
 	var result_sum = $('.input-sum');
 	var end_sum = parseInt(result_sum.val());
-	if(one + two == end_sum){
+	if(one + two == end_sum && myValidator){
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
 			data: that.serialize()
 		}).done(function() {
+			myValidator = false;
 			myForm.animate({opacity:0}, 300, function() {
 				sending.animate({opacity:1},300);
 			});
@@ -69,4 +75,4 @@ sendForm.submit(function(e) {
 	}
 
 	return false;
-});
+});s
