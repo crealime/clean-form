@@ -32,6 +32,5 @@ There is no need to modify the php file, all the settings are made in the html
 </select>
 <textarea id="message" name="Message" placeholder="Message" maxlength="1000"></textarea>
 ```
-<br>
-### Demo:
+#### Demo:
 http://webmaker.work/form
