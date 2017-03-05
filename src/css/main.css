@@ -173,7 +173,7 @@ body {
 }
 
 label.error {
-	color: red;
+	color: #666;
 	position: absolute;
 	margin: -2rem 0 0 35%;
 	pointer-events: none;

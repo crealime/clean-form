@@ -1,9 +1,38 @@
-> How to install
+# Clear Form
 
-1. git clone git_url your_site
-2. npm init
-3. npm i -D gulp
-4. npm i -D gulp-sass browser-sync gulp-concat gulp-uglifyjs gulp-cssnano gulp-rename gulp-autoprefixer gulp-imagemin imagemin-pngquant imagemin-mozjpeg imagemin-gifsicle imagemin-svgo gulp-cache gulp-pug gulp-merge-media-queries del
-5. npm i -g bower
-6. bower i -S jquery font-awesome jquery-validation
-7. gulp
+<div align="center">
+	<a href="http://webmaker.work/form/form.svg" alt="Clear Form"></a>
+</div>
+
+## Form template with an arbitrary number of fields
+
+***
+There is no need to modify the php file, all the settings are made in the html
+***
+
+```html
+<!-- Hidden settings fields-->
+<!-- Admin name -->
+<input class="form-name" type="hidden" name="project_name" value="Your Name">
+<!-- Admin e-mail -->
+<input type="hidden" name="admin_email" value="Your E-mail">
+<!-- E-mail Subject -->
+<input type="hidden" name="form_subject" value="New Message">
+<!-- Submission message -->
+<input type="hidden" name="alert_message" value="Your message has been sent!">
+<!-- Captcha Error -->
+<input type="hidden" name="wrong_sum" value="Sum of the numbers entered incorrectly!">
+<!-- End of hidden settings fields -->
+
+<input type="text" name="Name" placeholder="Name" required maxlength="30">
+<input type="email" name="Mail" placeholder="E-mail" maxlength="30">
+<input type="tel" name="Phone" placeholder="Phone" required maxlength="30">
+<select name="Select"><option value="" selected class="first-select">Ñhoice</option>
+	<option value="First">First</option>
+	<option value="Second">Second</option>
+	<option value="Third">Third</option>
+</select>
+<textarea id="message" name="Message" placeholder="Message" maxlength="1000"></textarea>
+```
+
+### Demo http://webmaker.work/form

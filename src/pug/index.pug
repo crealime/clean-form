@@ -2,6 +2,7 @@ doctype html
 html(lang="en")
 	head
 		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		title Clean Form
 		link(rel="stylesheet", href="css/main.css")
 	body
@@ -11,7 +12,7 @@ html(lang="en")
 			.form-box
 				h4.form-title Clean Form
 				form.form(id="send-form")
-					//- Hidden fields
+					//- Hidden settings fields
 					//- Admin name
 					input.form-name(type="hidden" name="project_name" value="Your Name")
 					//- Admin e-mail
@@ -22,7 +23,7 @@ html(lang="en")
 					input(type="hidden" name="alert_message" value="Your message has been sent!")
 					//- Сaptcha Error 
 					input(type="hidden" name="wrong_sum" value="Sum of the numbers entered incorrectly!")
-					//- End of hidden fields
+					//- End of hidden settings fields
 					i.fa.fa-user(aria-hidden="true")
 					input(type="text" name="Name" placeholder="Name" required maxlength="30")
 					i.fa.fa-envelope(aria-hidden="true")
@@ -36,11 +37,11 @@ html(lang="en")
 						<option value="Second">Second</option>
 						<option value="Third">Third</option>
 					i.fa.fa-comment(aria-hidden="true")
-					textarea(id="message" name="Сообщение" placeholder="Message" maxlength="1000")
+					textarea(id="message" name="Message" placeholder="Message" maxlength="1000")
 					//- Captcha
 					i.fa.fa-check(aria-hidden="true")
 					span.send-sum
-					input.input-sum(type="text" name="sum" placeholder="?" required maxlength="2")
+					input.input-sum(type="text" name="sum" placeholder="?" maxlength="2")
 					button.form-button Send
 
 		script(src="js/libs.min.js")

@@ -21,14 +21,7 @@ var one = Math.floor(Math.random() * 8.9999) + 1;
 var two = Math.floor(Math.random() * 8.9999) + 1;
 $('.send-sum').text(one + ' + ' + two + ' = ');
 
-$(".form").validate({
-	debug: true,
-  messages: {
-    sum: {
-      required: "Enter correct answer",
-    }
-  }
-});
+$(".form").validate();
 
 $("#send-form").submit(function(e) {
 	e.preventDefault;
@@ -53,6 +46,7 @@ $("#send-form").submit(function(e) {
 	}
 	else {
 		// alert(wrong);
+		$('.input-sum').val('').attr('placeholder', 'Enter the correct answer');
 		randomNumber();
 	}
 
