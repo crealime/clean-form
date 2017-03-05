@@ -1,7 +1,7 @@
 # Clear Form
 
 <p align="center">
-	<a href="http://webmaker.work/form/form.png" alt="Clear Form"></a>
+	<img src="http://webmaker.work/form/form.png" alt="Clear Form">
 </p>
 
 ## Form template with an arbitrary number of fields
