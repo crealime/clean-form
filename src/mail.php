@@ -1,6 +1,5 @@
 <?php
 
-$switch = true;
 $project_name = trim($_POST["project_name"]);
 $admin_email  = trim($_POST["admin_email"]);
 $form_subject = trim($_POST["form_subject"]);
@@ -10,9 +9,9 @@ $wrong_summ = trim($_POST["wrong_sum"]);
 foreach ( $_POST as $key => $value ) {
 	if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" && $key != "sum" ) {
 		$message .= "
-		" . ( ($switch = !$switch) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
-		<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>
-		<td style='padding: 10px; border: #e9e9e9 1px solid;'>$value</td>
+		" . '<tr">' . "
+		<td style='padding: 10px; background-color: #f0f0f0; width: 20%;'><b>$key</b></td>
+		<td style='padding: 10px; background-color: #f9f9f9;'>$value</td>
 	</tr>
 	";
 }
