@@ -27,6 +27,7 @@ There is no need to modify the php file, all the settings are made in the html
 	<option value="Second">Second</option>
 	<option value="Third">Third</option>
 </select>
-<textarea id="message" name="Message" placeholder="Message" maxlength="1000"></textarea>```
+<textarea id="message" name="Message" placeholder="Message" maxlength="1000"></textarea>
+```
 <h3>Demo:</h3>
 http://webmaker.work/form
