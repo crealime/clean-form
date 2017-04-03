@@ -1,13 +1,14 @@
-# Clean Form
-<br>
+<h1>Clean Form</h1>
+<br> 
 <p align="center">
 	<img src="http://webmaker.work/form/form2.png" alt="Clear Form">
 </p>
 <br>
-## Form template with captcha and an arbitrary number of fields
+<h2>Form template with captcha and an arbitrary number of fields</h2>
 <br>
 There is no need to modify the php file, all the settings are made in the html
 <br>
+
 ```html
 <!-- Hidden settings fields-->
 <!-- Admin name -->
@@ -28,5 +29,5 @@ There is no need to modify the php file, all the settings are made in the html
 </select>
 <textarea id="message" name="Message" placeholder="Message" maxlength="1000"></textarea>
 ```
-#### Demo:
+<h3>Demo:</h3>
 http://webmaker.work/form
