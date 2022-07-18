@@ -30,4 +30,4 @@ There is no need to modify the php file, all the settings are made in the html
 <textarea id="message" name="Message" placeholder="Message" maxlength="1000"></textarea>
 ```
 <h3>Demo:</h3>
-http://webmaker.work/form
+https://deveb.pro/form/
